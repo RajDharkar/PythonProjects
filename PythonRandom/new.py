@@ -1,7 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Create a DataFrame with the given data
 data = {
     'Population': ['A', 'B', 'C'],
     'Red': [18, 5, 1],
@@ -14,10 +13,8 @@ data = {
 
 df = pd.DataFrame(data)
 
-# Set Population as the index
 df.set_index('Population', inplace=True)
 
-# Plot the line graph with updated title and y-axis label
 plt.figure(figsize=(10, 6))
 for column in df.columns:
     plt.plot(df.index, df[column], marker='o', label=column)
